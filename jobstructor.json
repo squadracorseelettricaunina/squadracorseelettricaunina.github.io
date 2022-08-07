@@ -1,6 +1,8 @@
 {
   "version": "4.0.0",
   "changelog": [
-    "Prima Versione sottoposta a versionamento"
+    "Prima Versione sottoposta a versionamento",
+    "Aggiunta la possibilità di disattivare il multi-thread",
+    "Aggiunta la possibilità di modificare lo script di inizializzazione"
   ]
 }
