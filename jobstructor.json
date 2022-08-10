@@ -1,8 +1,20 @@
 {
-  "version": "4.0.0",
-  "changelog": [
-    "Prima Versione sottoposta a versionamento",
-    "Aggiunta la possibilità di disattivare il multi-thread",
-    "Aggiunta la possibilità di modificare lo script di inizializzazione"
-  ]
+	"latest": "4.0.1",
+	"history": [
+		{
+			"version": "4.0.1",
+			"changelog": [
+				"Aggiunta la possibilità di selezionare il nodo su cui eseguire la simulazione",
+				"Aggiunta la possibilità di specificare un numero di processori oltre il massimo consentito"
+			]
+		},
+		{
+			"version": "4.0.0",
+			"changelog": [
+				"Prima Versione sottoposta a versionamento",
+				"Aggiunta la possibilità di disattivare il multi-thread",
+				"Aggiunta la possibilità di modificare lo script di inizializzazione"
+			]
+		}
+	]
 }
