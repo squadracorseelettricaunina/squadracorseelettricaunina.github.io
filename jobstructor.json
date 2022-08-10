@@ -5,7 +5,8 @@
 			"version": "4.0.1",
 			"changelog": [
 				"Aggiunta la possibilità di selezionare il nodo su cui eseguire la simulazione",
-				"Aggiunta la possibilità di specificare un numero di processori oltre il massimo consentito"
+				"Aggiunta la possibilità di specificare un numero di processori oltre il massimo consentito",
+				"Nuova logica per la finestra di avviso di aggiornamento"
 			]
 		},
 		{
