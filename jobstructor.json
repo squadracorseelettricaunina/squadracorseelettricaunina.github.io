@@ -1,6 +1,12 @@
 {
-	"latest": "4.0.1",
+	"latest": "4.0.2",
 	"history": [
+		{
+			"version": "4.0.2",
+			"changelog": [
+				"Risolto bug della selezione del nodo su cui eseguire la simulazione"
+			]
+		},
 		{
 			"version": "4.0.1",
 			"changelog": [
@@ -18,7 +24,7 @@
 			]
 		}
 	],
-	"version": "4.0.1",
+	"version": "4.0.2",
 	"changelog": [
 		"Aggiunta la possibilità di selezionare il nodo su cui eseguire la simulazione",
 		"Aggiunta la possibilità di specificare un numero di processori oltre il massimo consentito",
