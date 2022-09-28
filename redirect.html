@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UniNa Corse E-Team</title>
+  </head>
+  <body>
+    <script>
+      var links = {
+        "recruitments": "/recruitments.html"
+      }
+
+      var page = new URL(location).searchParams.get("page")
+      if(page != undefined && page in links)
+        location = links[page]
+      else
+        location = "/404.html"
+    </script>
+  </body>
+</html>
