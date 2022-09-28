@@ -1,2 +1,2 @@
 # squadracorseelettricaunina.github.io
-Sito Web
+Hosting Web di servizio e utilità varie
