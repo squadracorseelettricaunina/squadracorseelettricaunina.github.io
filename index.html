@@ -1,760 +1,765 @@
-<style>
-/* fallback */
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/materialicons/v139/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 300;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fCRc4EsA.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 300;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fABc4EsA.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek-ext */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 300;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fCBc4EsA.woff2) format('woff2');
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 300;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fBxc4EsA.woff2) format('woff2');
-  unicode-range: U+0370-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 300;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fCxc4EsA.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 300;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fChc4EsA.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 300;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek-ext */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format('woff2');
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2');
-  unicode-range: U+0370-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCRc4EsA.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fABc4EsA.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek-ext */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCBc4EsA.woff2) format('woff2');
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBxc4EsA.woff2) format('woff2');
-  unicode-range: U+0370-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCxc4EsA.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCRc4EsA.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfABc4EsA.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek-ext */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCBc4EsA.woff2) format('woff2');
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBxc4EsA.woff2) format('woff2');
-  unicode-range: U+0370-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Roboto Slab';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmYmRjRdE.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Roboto Slab';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISma2RjRdE.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek-ext */
-@font-face {
-  font-family: 'Roboto Slab';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmY2RjRdE.woff2) format('woff2');
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: 'Roboto Slab';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmbGRjRdE.woff2) format('woff2');
-  unicode-range: U+0370-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Roboto Slab';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmYGRjRdE.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Roboto Slab';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmYWRjRdE.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Roboto Slab';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmb2Rj.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Roboto Slab';
-  font-style: normal;
-  font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoa4OmYmRjRdE.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Roboto Slab';
-  font-style: normal;
-  font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoa4Oma2RjRdE.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek-ext */
-@font-face {
-  font-family: 'Roboto Slab';
-  font-style: normal;
-  font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoa4OmY2RjRdE.woff2) format('woff2');
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: 'Roboto Slab';
-  font-style: normal;
-  font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoa4OmbGRjRdE.woff2) format('woff2');
-  unicode-range: U+0370-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Roboto Slab';
-  font-style: normal;
-  font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoa4OmYGRjRdE.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Roboto Slab';
-  font-style: normal;
-  font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoa4OmYWRjRdE.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Roboto Slab';
-  font-style: normal;
-  font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoa4Omb2Rj.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -moz-font-feature-settings: 'liga';
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-	text-decoration: none;
-}
-
-.c-gCCjSe {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-}
-
-.c-ggcAdm {
-  padding: 10px;
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 1.2;
-  letter-spacing: 0.35px;
-  border-radius: 4px;
-}
-
-.c-ggcAdm-iinPPZV-css {
-  background: rgb(224, 224, 224) none repeat scroll 0% 0%;
-  color: rgb(131, 127, 127);
-}
-
-.c-fXflsm {
-  padding-top: 10px;
-  font-size: 12px;
-  line-height: 1.5;
-}
-
-.c-fXflsm-ibVikjC-css {
-  color: rgb(131, 127, 127);
-  text-align: center;
-}
-
-</style>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reclutamenti</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
+	/* fallback */
+	@font-face {
+	  font-family: 'Material Icons';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: url(https://fonts.gstatic.com/s/materialicons/v139/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+	}
+	/* cyrillic-ext */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 300;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fCRc4EsA.woff2) format('woff2');
+	  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+	}
+	/* cyrillic */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 300;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fABc4EsA.woff2) format('woff2');
+	  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+	}
+	/* greek-ext */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 300;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fCBc4EsA.woff2) format('woff2');
+	  unicode-range: U+1F00-1FFF;
+	}
+	/* greek */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 300;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fBxc4EsA.woff2) format('woff2');
+	  unicode-range: U+0370-03FF;
+	}
+	/* vietnamese */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 300;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fCxc4EsA.woff2) format('woff2');
+	  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+	}
+	/* latin-ext */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 300;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fChc4EsA.woff2) format('woff2');
+	  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+	}
+	/* latin */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 300;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format('woff2');
+	  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	}
+	/* cyrillic-ext */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');
+	  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+	}
+	/* cyrillic */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format('woff2');
+	  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+	}
+	/* greek-ext */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format('woff2');
+	  unicode-range: U+1F00-1FFF;
+	}
+	/* greek */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2');
+	  unicode-range: U+0370-03FF;
+	}
+	/* vietnamese */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2');
+	  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+	}
+	/* latin-ext */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
+	  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+	}
+	/* latin */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+	  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	}
+	/* cyrillic-ext */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 500;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCRc4EsA.woff2) format('woff2');
+	  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+	}
+	/* cyrillic */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 500;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fABc4EsA.woff2) format('woff2');
+	  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+	}
+	/* greek-ext */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 500;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCBc4EsA.woff2) format('woff2');
+	  unicode-range: U+1F00-1FFF;
+	}
+	/* greek */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 500;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBxc4EsA.woff2) format('woff2');
+	  unicode-range: U+0370-03FF;
+	}
+	/* vietnamese */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 500;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCxc4EsA.woff2) format('woff2');
+	  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+	}
+	/* latin-ext */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 500;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2) format('woff2');
+	  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+	}
+	/* latin */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 500;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format('woff2');
+	  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	}
+	/* cyrillic-ext */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 700;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCRc4EsA.woff2) format('woff2');
+	  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+	}
+	/* cyrillic */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 700;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfABc4EsA.woff2) format('woff2');
+	  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+	}
+	/* greek-ext */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 700;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCBc4EsA.woff2) format('woff2');
+	  unicode-range: U+1F00-1FFF;
+	}
+	/* greek */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 700;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBxc4EsA.woff2) format('woff2');
+	  unicode-range: U+0370-03FF;
+	}
+	/* vietnamese */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 700;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2) format('woff2');
+	  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+	}
+	/* latin-ext */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 700;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2) format('woff2');
+	  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+	}
+	/* latin */
+	@font-face {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 700;
+	  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format('woff2');
+	  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	}
+	/* cyrillic-ext */
+	@font-face {
+	  font-family: 'Roboto Slab';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmYmRjRdE.woff2) format('woff2');
+	  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+	}
+	/* cyrillic */
+	@font-face {
+	  font-family: 'Roboto Slab';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISma2RjRdE.woff2) format('woff2');
+	  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+	}
+	/* greek-ext */
+	@font-face {
+	  font-family: 'Roboto Slab';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmY2RjRdE.woff2) format('woff2');
+	  unicode-range: U+1F00-1FFF;
+	}
+	/* greek */
+	@font-face {
+	  font-family: 'Roboto Slab';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmbGRjRdE.woff2) format('woff2');
+	  unicode-range: U+0370-03FF;
+	}
+	/* vietnamese */
+	@font-face {
+	  font-family: 'Roboto Slab';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmYGRjRdE.woff2) format('woff2');
+	  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+	}
+	/* latin-ext */
+	@font-face {
+	  font-family: 'Roboto Slab';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmYWRjRdE.woff2) format('woff2');
+	  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+	}
+	/* latin */
+	@font-face {
+	  font-family: 'Roboto Slab';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmb2Rj.woff2) format('woff2');
+	  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	}
+	/* cyrillic-ext */
+	@font-face {
+	  font-family: 'Roboto Slab';
+	  font-style: normal;
+	  font-weight: 700;
+	  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoa4OmYmRjRdE.woff2) format('woff2');
+	  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+	}
+	/* cyrillic */
+	@font-face {
+	  font-family: 'Roboto Slab';
+	  font-style: normal;
+	  font-weight: 700;
+	  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoa4Oma2RjRdE.woff2) format('woff2');
+	  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+	}
+	/* greek-ext */
+	@font-face {
+	  font-family: 'Roboto Slab';
+	  font-style: normal;
+	  font-weight: 700;
+	  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoa4OmY2RjRdE.woff2) format('woff2');
+	  unicode-range: U+1F00-1FFF;
+	}
+	/* greek */
+	@font-face {
+	  font-family: 'Roboto Slab';
+	  font-style: normal;
+	  font-weight: 700;
+	  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoa4OmbGRjRdE.woff2) format('woff2');
+	  unicode-range: U+0370-03FF;
+	}
+	/* vietnamese */
+	@font-face {
+	  font-family: 'Roboto Slab';
+	  font-style: normal;
+	  font-weight: 700;
+	  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoa4OmYGRjRdE.woff2) format('woff2');
+	  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+	}
+	/* latin-ext */
+	@font-face {
+	  font-family: 'Roboto Slab';
+	  font-style: normal;
+	  font-weight: 700;
+	  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoa4OmYWRjRdE.woff2) format('woff2');
+	  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+	}
+	/* latin */
+	@font-face {
+	  font-family: 'Roboto Slab';
+	  font-style: normal;
+	  font-weight: 700;
+	  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoa4Omb2Rj.woff2) format('woff2');
+	  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	}
 
-*, ::before, ::after {
-  box-sizing: border-box;
-  font-style: normal;
-  font-weight: 400;
-  font-family: Roboto;
-  scroll-behavior: smooth;
-}
+	.material-icons {
+	  font-family: 'Material Icons';
+	  font-weight: normal;
+	  font-style: normal;
+	  font-size: 24px;
+	  line-height: 1;
+	  letter-spacing: normal;
+	  text-transform: none;
+	  display: inline-block;
+	  white-space: nowrap;
+	  word-wrap: normal;
+	  direction: ltr;
+	  -moz-font-feature-settings: 'liga';
+	  -moz-osx-font-smoothing: grayscale;
+	}
 
-:root, .t-cVwMrD {
-  --colors-nav: #3D41D7;
-  --colors-grey: #dadada;
-  --space-1: 5px;
-  --sizes-1: 5px;
-  --fonts-roboto: Roboto;
-}
+	a {
+		text-decoration: none;
+	}
 
-body {
-  padding: 0px;
-  margin: 0px;
-  background: rgb(255, 255, 255) none repeat scroll 0% 0%;
-  font-family: Roboto sans-serif;
-  font-weight: 400;
-  z-index: 0;
-}
+	.c-gCCjSe {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  gap: 15px;
+	}
 
-p, span, div, h1, h2, h3, h4, h5, h6 {
-  padding: 0px;
-  margin: 0px;
-}
+	.c-ggcAdm {
+	  padding: 10px;
+	  font-size: 36px;
+	  font-weight: 400;
+	  line-height: 1.2;
+	  letter-spacing: 0.35px;
+	  border-radius: 4px;
+	}
 
-.c-iQViAg {
-  width: 100%;
-  height: fit-content;
-  padding: 10px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  font-family: Roboto;
-}
+	.c-ggcAdm-iinPPZV-css {
+	  background: rgb(224, 224, 224) none repeat scroll 0% 0%;
+	  color: rgb(131, 127, 127);
+	}
 
-.c-iQViAg-gaqMnF-background-true {
-  background-image: url("data/front/background/6328e2b27721f5.39624893.jpeg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+	.c-fXflsm {
+	  padding-top: 10px;
+	  font-size: 12px;
+	  line-height: 1.5;
+	}
 
-.c-ciPGlL {
-  flex: 1 1 auto;
-}
+	.c-fXflsm-ibVikjC-css {
+	  color: rgb(131, 127, 127);
+	  text-align: center;
+	}
 
-.c-ciPGlL-ihUJPfs-css {
-  margin-top: 64px;
-}
+	</style>
+		<style>
 
-.c-ioHVxu {
-  padding: 5px;
-  max-width: 680px;
-  margin: 0px auto;
-}
+	*, ::before, ::after {
+	  box-sizing: border-box;
+	  font-style: normal;
+	  font-weight: 400;
+	  font-family: Roboto;
+	  scroll-behavior: smooth;
+	}
 
-.c-hqUHyf {
-  max-width: 320px;
-  overflow: hidden;
-  overflow-wrap: break-word;
-  margin: 0px auto;
-}
+	:root, .t-cVwMrD {
+	  --colors-nav: #3D41D7;
+	  --colors-grey: #dadada;
+	  --space-1: 5px;
+	  --sizes-1: 5px;
+	  --fonts-roboto: Roboto;
+	}
 
-.c-lfuVgf {
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  letter-spacing: 0.15px;
-}
+	body {
+	  padding: 0px;
+	  margin: 0px;
+	  background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+	  font-family: Roboto sans-serif;
+	  font-weight: 400;
+	  z-index: 0;
+	}
 
-.c-lfuVgf-ijtDDYs-css {
-  color: rgb(51, 51, 51);
-  text-align: center;
-}
+	p, span, div, h1, h2, h3, h4, h5, h6 {
+	  padding: 0px;
+	  margin: 0px;
+	}
 
-.c-cZOXvU {
-  font-size: 14px;
-  line-height: 16px;
-  color: rgb(51, 51, 51);
-}
+	.c-iQViAg {
+	  width: 100%;
+	  height: fit-content;
+	  padding: 10px;
+	  min-height: 100vh;
+	  display: flex;
+	  flex-direction: column;
+	  font-family: Roboto;
+	}
 
-.c-cZOXvU-ijtDDYs-css {
-  color: rgb(51, 51, 51);
-  text-align: center;
-}
+	.c-iQViAg-gaqMnF-background-true {
+	  background-image: url("data/front/background/6328e2b27721f5.39624893.jpeg");
+	  background-position: center center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	}
 
-.c-koIWFx {
-  max-width: 320px;
-  width: 100%;
-  margin: 30px auto 0px;
-  max-height: 400px;
-  object-fit: contain;
-}
+	.c-ciPGlL {
+	  flex: 1 1 auto;
+	}
 
-.ql-align-center {
-  text-align: center;
-}
+	.c-ciPGlL-ihUJPfs-css {
+	  margin-top: 64px;
+	}
 
-.c-hqUHyf {
-  max-width: 320px;
-  overflow: hidden;
-  overflow-wrap: break-word;
-  margin: 0px auto;
-}
+	.c-ioHVxu {
+	  padding: 5px;
+	  max-width: 680px;
+	  margin: 0px auto;
+	}
 
-.c-lfuVgf {
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  letter-spacing: 0.15px;
-}
+	.c-hqUHyf {
+	  max-width: 320px;
+	  overflow: hidden;
+	  overflow-wrap: break-word;
+	  margin: 0px auto;
+	}
 
-.c-lfuVgf-ijtDDYs-css {
-  color: rgb(51, 51, 51);
-  text-align: center;
-}
+	.c-lfuVgf {
+	  font-size: 24px;
+	  line-height: 28px;
+	  font-weight: 700;
+	  letter-spacing: 0.15px;
+	}
 
-.c-cZOXvU {
-  font-size: 14px;
-  line-height: 16px;
-  color: rgb(51, 51, 51);
-}
+	.c-lfuVgf-ijtDDYs-css {
+	  color: rgb(51, 51, 51);
+	  text-align: center;
+	}
 
-.c-cZOXvU-ijtDDYs-css {
-  color: rgb(51, 51, 51);
-  text-align: center;
-}
+	.c-cZOXvU {
+	  font-size: 14px;
+	  line-height: 16px;
+	  color: rgb(51, 51, 51);
+	}
 
-.c-koIWFx {
-  max-width: 320px;
-  width: 100%;
-  margin: 30px auto 0px;
-  max-height: 400px;
-  object-fit: contain;
-}
+	.c-cZOXvU-ijtDDYs-css {
+	  color: rgb(51, 51, 51);
+	  text-align: center;
+	}
 
-.c-eIXZat {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  width: 100%;
-  margin: 0px auto;
-  background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% !important;
-}
+	.c-koIWFx {
+	  max-width: 320px;
+	  width: 100%;
+	  margin: 30px auto 0px;
+	  max-height: 400px;
+	  object-fit: contain;
+	}
 
-.c-hkOTeJ {
-  width: 100%;
-  height: 2px;
-  background: rgb(255, 255, 255) none repeat scroll 0% 0%;
-}
+	.ql-align-center {
+	  text-align: center;
+	}
 
-.c-kHDKAx {
-  display: flex;
-}
+	.c-hqUHyf {
+	  max-width: 320px;
+	  overflow: hidden;
+	  overflow-wrap: break-word;
+	  margin: 0px auto;
+	}
 
-.c-kHDKAx svg {
-  fill: rgb(255, 255, 255);
-  transform: scale(1);
-  width: 30px;
-  height: 25px;
-}
+	.c-lfuVgf {
+	  font-size: 24px;
+	  line-height: 28px;
+	  font-weight: 700;
+	  letter-spacing: 0.15px;
+	}
 
-.c-hkOTeJ {
-  width: 100%;
-  height: 2px;
-  background: rgb(255, 255, 255) none repeat scroll 0% 0%;
-}
+	.c-lfuVgf-ijtDDYs-css {
+	  color: rgb(51, 51, 51);
+	  text-align: center;
+	}
 
-.c-khkYXk {
-  word-break: break-word;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 100%;
-  min-height: 50px;
-  width: 100%;
-  color: rgb(0, 0, 0);
-  background: rgba(255, 247, 0, 0.82) none repeat scroll 0% 0%;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: 0.15px;
-  padding: 12px 15px;
-  border-radius: 4px;
-  border: 1px solid rgb(0, 0, 0);
-  margin: 0px auto;
-  text-align: center;
-}
+	.c-cZOXvU {
+	  font-size: 14px;
+	  line-height: 16px;
+	  color: rgb(51, 51, 51);
+	}
 
-.c-gDKEJZ {
-  display: flex;
-}
+	.c-cZOXvU-ijtDDYs-css {
+	  color: rgb(51, 51, 51);
+	  text-align: center;
+	}
 
-.c-khkYXk svg {
-  fill: rgb(0, 0, 0);
-  margin-right: 5px;
-}
+	.c-koIWFx {
+	  max-width: 320px;
+	  width: 100%;
+	  margin: 30px auto 0px;
+	  max-height: 400px;
+	  object-fit: contain;
+	}
 
-.c-gDKEJZ svg {
-  transform: scale(1);
-  width: 30px;
-  height: 25px;
-}
+	.c-eIXZat {
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  gap: 5px;
+	  width: 100%;
+	  margin: 0px auto;
+	  background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% !important;
+	}
 
-.c-ioHVxu {
-  padding: 5px;
-  max-width: 680px;
-  margin: 0px auto;
-}
+	.c-hkOTeJ {
+	  width: 100%;
+	  height: 2px;
+	  background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+	}
 
-.c-eIXZat {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  width: 100%;
-  margin: 0px auto;
-  background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% !important;
-}
+	.c-kHDKAx {
+	  display: flex;
+	}
 
-.c-dEGiVm {
-  width: 100%;
-  height: 2px;
-  background: rgb(255, 255, 255) none repeat scroll 0% 0%;
-}
+	.c-kHDKAx svg {
+	  fill: rgb(255, 255, 255);
+	  transform: scale(1);
+	  width: 30px;
+	  height: 25px;
+	}
 
-.c-bGzQjq {
-  display: flex;
-}
+	.c-hkOTeJ {
+	  width: 100%;
+	  height: 2px;
+	  background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+	}
 
-.c-bGzQjq svg {
-  fill: rgb(255, 255, 255);
-  transform: scale(1);
-  width: 30px;
-  height: 25px;
-}
+	.c-khkYXk {
+	  word-break: break-word;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  max-width: 100%;
+	  min-height: 50px;
+	  width: 100%;
+	  color: rgb(0, 0, 0);
+	  background: rgba(255, 247, 0, 0.82) none repeat scroll 0% 0%;
+	  font-style: normal;
+	  font-weight: 500;
+	  font-size: 24px;
+	  line-height: 1;
+	  letter-spacing: 0.15px;
+	  padding: 12px 15px;
+	  border-radius: 4px;
+	  border: 1px solid rgb(0, 0, 0);
+	  margin: 0px auto;
+	  text-align: center;
+	}
 
-.c-dEGiVm {
-  width: 100%;
-  height: 2px;
-  background: rgb(255, 255, 255) none repeat scroll 0% 0%;
-}
+	.c-gDKEJZ {
+	  display: flex;
+	}
 
-p, span, div, h1, h2, h3, h4, h5, h6 {
-  padding: 0px;
-  margin: 0px;
-}
+	.c-khkYXk svg {
+	  fill: rgb(0, 0, 0);
+	  margin-right: 5px;
+	}
 
-.c-huTMdB {
-  word-break: break-word;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 100%;
-  min-height: 50px;
-  width: 100%;
-  color: rgb(255, 255, 255);
-  background: rgba(0, 0, 0, 0) linear-gradient(45deg, rgb(255, 252, 0), rgb(255, 39, 39)) repeat scroll 0% 0%;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: 0.15px;
-  padding: 12px 15px;
-  border-radius: 4px;
-  border: 1px solid rgb(0, 0, 0);
-  margin: 0px auto;
-  text-align: center;
-}
+	.c-gDKEJZ svg {
+	  transform: scale(1);
+	  width: 30px;
+	  height: 25px;
+	}
 
-.c-gDKEJZ {
-  display: flex;
-}
+	.c-ioHVxu {
+	  padding: 5px;
+	  max-width: 680px;
+	  margin: 0px auto;
+	}
 
-.c-huTMdB svg {
-  fill: rgb(255, 255, 255);
-  margin-right: 5px;
-}
+	.c-eIXZat {
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  gap: 5px;
+	  width: 100%;
+	  margin: 0px auto;
+	  background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% !important;
+	}
 
-.c-gDKEJZ svg {
-  transform: scale(1);
-  width: 30px;
-  height: 25px;
-}
+	.c-dEGiVm {
+	  width: 100%;
+	  height: 2px;
+	  background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+	}
 
-.ql-size-large {
-  font-size: 1.5em;
-}
+	.c-bGzQjq {
+	  display: flex;
+	}
 
-.c-iJMHxX {
-  word-break: break-word;
-  display: flex;
-  max-width: 100%;
-  min-height: 50px;
-  width: 100%;
-  color: rgb(255, 255, 255);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.15px;
-  padding: 12px 10px;
-  border-radius: 4px;
-  border: 1px solid rgb(222, 222, 222);
-  margin: 0px auto;
-  align-items: center;
-}
+	.c-bGzQjq svg {
+	  fill: rgb(255, 255, 255);
+	  transform: scale(1);
+	  width: 30px;
+	  height: 25px;
+	}
 
-.c-frZlqT {
-  display: flex;
-}
+	.c-dEGiVm {
+	  width: 100%;
+	  height: 2px;
+	  background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+	}
 
-.c-iJMHxX svg {
-  fill: rgb(222, 222, 222);
-  width: 100%;
-  height: 100%;
-  min-width: 30px;
-  margin-right: 5px;
-}
+	p, span, div, h1, h2, h3, h4, h5, h6 {
+	  padding: 0px;
+	  margin: 0px;
+	}
 
-.c-frZlqT svg {
-  transform: scale(1);
-  width: 50px;
-  height: 50px;
-  padding-left: 20px;
-}
+	.c-huTMdB {
+	  word-break: break-word;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  max-width: 100%;
+	  min-height: 50px;
+	  width: 100%;
+	  color: rgb(255, 255, 255);
+	  background: rgba(0, 0, 0, 0) linear-gradient(45deg, rgb(255, 252, 0), rgb(255, 39, 39)) repeat scroll 0% 0%;
+	  font-style: normal;
+	  font-weight: 500;
+	  font-size: 24px;
+	  line-height: 1;
+	  letter-spacing: 0.15px;
+	  padding: 12px 15px;
+	  border-radius: 4px;
+	  border: 1px solid rgb(0, 0, 0);
+	  margin: 0px auto;
+	  text-align: center;
+	}
 
-.c-htSSkV {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding-left: 10px;
-}
+	.c-gDKEJZ {
+	  display: flex;
+	}
 
-.c-oOBnE {
-  font-size: 24px;
-  font-weight: 500;
-  text-align: left;
-  line-height: 1;
-}
+	.c-huTMdB svg {
+	  fill: rgb(255, 255, 255);
+	  margin-right: 5px;
+	}
 
-.c-kShPsu {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.15px;
-  text-align: left;
-}
-</style>
+	.c-gDKEJZ svg {
+	  transform: scale(1);
+	  width: 30px;
+	  height: 25px;
+	}
 
+	.ql-size-large {
+	  font-size: 1.5em;
+	}
+
+	.c-iJMHxX {
+	  word-break: break-word;
+	  display: flex;
+	  max-width: 100%;
+	  min-height: 50px;
+	  width: 100%;
+	  color: rgb(255, 255, 255);
+	  font-style: normal;
+	  font-weight: 700;
+	  font-size: 16px;
+	  line-height: 24px;
+	  letter-spacing: 0.15px;
+	  padding: 12px 10px;
+	  border-radius: 4px;
+	  border: 1px solid rgb(222, 222, 222);
+	  margin: 0px auto;
+	  align-items: center;
+	}
+
+	.c-frZlqT {
+	  display: flex;
+	}
+
+	.c-iJMHxX svg {
+	  fill: rgb(222, 222, 222);
+	  width: 100%;
+	  height: 100%;
+	  min-width: 30px;
+	  margin-right: 5px;
+	}
+
+	.c-frZlqT svg {
+	  transform: scale(1);
+	  width: 50px;
+	  height: 50px;
+	  padding-left: 20px;
+	}
+
+	.c-htSSkV {
+	  display: flex;
+	  flex-direction: column;
+	  width: 100%;
+	  padding-left: 10px;
+	}
+
+	.c-oOBnE {
+	  font-size: 24px;
+	  font-weight: 500;
+	  text-align: left;
+	  line-height: 1;
+	}
+
+	.c-kShPsu {
+	  font-size: 14px;
+	  font-weight: 400;
+	  line-height: 24px;
+	  letter-spacing: 0.15px;
+	  text-align: left;
+	}
+	</style>
+</head>
 
 <body>
 	
@@ -803,3 +808,4 @@ var x = setInterval(function() {
 </script>
 
 </body>
+</html>
