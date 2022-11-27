@@ -1,6 +1,12 @@
 {
-	"latest": "4.0.2",
+	"latest": "4.0.3",
 	"history": [
+		{
+			"version": "4.0.3",
+			"changelog": [
+				"Aggiornati URL macchine alternative"
+			]
+		},
 		{
 			"version": "4.0.2",
 			"changelog": [
@@ -24,8 +30,8 @@
 			]
 		}
 	],
-	"version": "4.0.2",
+	"version": "4.0.3",
 	"changelog": [
-		"Risolto bug della selezione del nodo su cui eseguire la simulazione"
+		"Aggiornati URL macchine alternative"
 	]
 }
