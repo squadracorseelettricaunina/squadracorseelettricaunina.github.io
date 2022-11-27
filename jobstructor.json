@@ -4,7 +4,8 @@
 		{
 			"version": "4.0.3",
 			"changelog": [
-				"Aggiornati URL macchine alternative"
+				"Aggiornati URL macchine alternative",
+				"Aggiornato URL repository"
 			]
 		},
 		{
@@ -32,6 +33,6 @@
 	],
 	"version": "4.0.3",
 	"changelog": [
-		"Aggiornati URL macchine alternative"
+		"Aggiornati URL macchine alternative, aggiornato URL repository"
 	]
 }
