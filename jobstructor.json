@@ -1,6 +1,12 @@
 {
-	"latest": "4.0.3",
+	"latest": "4.0.4",
 	"history": [
+		{
+			"version": "4.0.4",
+			"changelog": [
+				"Aggiunte nuove macchine",
+			]
+		},
 		{
 			"version": "4.0.3",
 			"changelog": [
@@ -31,8 +37,8 @@
 			]
 		}
 	],
-	"version": "4.0.3",
+	"version": "4.0.4",
 	"changelog": [
-		"Aggiornati URL macchine alternative, aggiornato URL repository"
+		"Aggiunte nuove macchine"
 	]
 }
