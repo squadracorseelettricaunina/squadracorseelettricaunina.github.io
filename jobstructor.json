@@ -1,6 +1,12 @@
 {
-	"latest": "4.0.4",
+	"latest": "4.1.0",
 	"history": [
+		{
+			"version": "4.1.0",
+			"changelog": [
+				"Aggiunto estensione Proxy"
+			]
+		},
 		{
 			"version": "4.0.4",
 			"changelog": [
@@ -37,8 +43,8 @@
 			]
 		}
 	],
-	"version": "4.0.4",
+	"version": "4.1.0",
 	"changelog": [
-		"Aggiunte nuove macchine"
+		"Aggiunto estensione Proxy"
 	]
 }
